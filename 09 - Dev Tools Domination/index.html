@@ -1,47 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Console Tricks!</title>
-  <link rel="icon" href="https://fav.farm/🔥" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Console Tricks!</title>
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <p onClick="makeGreen()">×BREAK×DOWN×</p>
 
-  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+    <script>
+      const vara = "xd";
 
-  <script>
-    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+      const dogs = [
+        {name: "Snickers", age: 2},
+        {name: "hugo", age: 8},
+      ];
 
-    function makeGreen() {
-      const p = document.querySelector('p');
-      p.style.color = '#BADA55';
-      p.style.fontSize = '50px';
-    }
+      function makeGreen() {
+        const p = document.querySelector("p");
+        p.style.color = "#BADA55";
+        p.style.fontSize = "50px";
+      }
 
-    // Regular
+      // Regular
+      console.log("yo");
 
-    // Interpolated
+      // Interpolated
+      console.log(`yo ${vara}`);
 
-    // Styled
+      // Styled
+      console.log("%c iam am yo", "font-size:20px");
 
-    // warning!
+      // warning!
+      console.warn("STOP");
 
-    // Error :|
+      // Error :|
+      console.error("ERROR");
 
-    // Info
+      // Info
+      console.info("INFO");
 
-    // Testing
+      // Testing
+      console.assert(1 === 2, "that's wrong!");
 
-    // clearing
+      // clearing
+      console.clear();
 
-    // Viewing DOM Elements
+      // Viewing DOM Elements
+      const p = document.querySelector("p");
+      console.log(p);
+      console.dir(p);
 
-    // Grouping together
+      // Grouping together
+      dogs.forEach((dog) => {
+        console.group(`${dog.name}`);
+        console.log(`This is ${dog.name}`);
+        console.groupEnd(`${dog.name}`);
+      });
 
-    // counting
+      // counting
+      console.count("west");
+      console.count("west");
+      console.count("west");
+      console.count("west");
+      console.count("west");
+      console.count("west");
 
-    // timing
+      // timing
 
-  </script>
-</body>
+      console.time("fetching data");
+      console.log("xdddddd");
+      console.timeEnd("fetching data");
+    </script>
+  </body>
 </html>
